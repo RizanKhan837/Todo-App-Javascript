@@ -9,7 +9,27 @@ var tasks = document.querySelector(".tasks")
 
 function addTodo() {
     //create li tag with text node
-    let newItem = document.createElement('div')
+    if (input.value.trim() != "") {
+        let newItem = document.createElement('div')
+        newItem.classList.add('item')
+        var object = document.createElement('object')
+        var liText = document.createTextNode(input.value)
+        object.appendChild(liText)
+        //list.appendChild(object
+        newItem.innerHTML = `<p> ${input.value} </p>
+        <div class = "item-btn">
+            <i class="fa-solid fa-pen-to-square" onclick="editItem(this)"></i>
+            <i class="fa-solid fa-xmark" onclick="deleteItem(this)"></i>
+        </div>`
+
+        tasks.appendChild(newItem)
+
+        input.value = "";
+    }else{
+        alert("Input Task First")
+    }
+
+    /* let newItem = document.createElement('div')
     newItem.classList.add('item')
     var object = document.createElement('object')
     var liText = document.createTextNode(input.value)
@@ -21,7 +41,7 @@ function addTodo() {
             <i class="fa-solid fa-xmark" onclick="deleteItem(this)"></i>
     </div>`
 
-    tasks.appendChild(newItem)
+    tasks.appendChild(newItem) */
 
     /* var todoItem = document.getElementById("todo_Item");
     var object = document.createElement("object");
@@ -45,7 +65,7 @@ function addTodo() {
     /* list.appendChild(object); */
     /* li.appendChild(editBtn);
     li.appendChild(deleteBtn); */
-    input.value = "";
+    
 
     console.log(object);
 }
