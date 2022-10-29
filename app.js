@@ -64,14 +64,14 @@ function addTodo() {
     /* list.appendChild(object); */
     /* li.appendChild(editBtn);
     li.appendChild(deleteBtn); */
-    
 
     console.log(object);
 }
 
 function editItem(e) {
     var newItem = prompt("Enter New Value");
-    e.parentNode.parentNode.firstChild.value = newItem;
+    console.log(e.parentNode.parentNode.firstChild);
+    e.parentNode.parentNode.firstChild.innerHTML =  `${newItem}`;
     console.log(e.parentNode.parentNode.firstChild.value);
 }
 
