@@ -60,5 +60,5 @@ function deleteItem(e) {
 }
 
 function deleteAll() {
-    list.innerHTML = "";
+    tasks.innerHTML = "";
 }

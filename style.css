@@ -47,6 +47,7 @@ body{
 .input-list{
     padding: 10px;
     border-radius: 5px;
+    max-lines: 1;
     border: 1px solid #ccc;
     font-size: 16px;
     outline: none;
@@ -61,7 +62,8 @@ body{
 .item{
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.02);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.1);
     margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
