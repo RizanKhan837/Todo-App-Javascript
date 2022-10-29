@@ -21,7 +21,6 @@ function addTodo() {
             <i class="fa-solid fa-pen-to-square" onclick="editItem(this)"></i>
             <i class="fa-solid fa-xmark" onclick="deleteItem(this)"></i>
         </div>`
-
         tasks.appendChild(newItem)
 
         input.value = "";
@@ -71,12 +70,13 @@ function addTodo() {
 }
 
 function editItem(e) {
-    var newItem = prompt("Enter New Value ");
-    e.parentNode.firstChild.nodeValue = newItem;
+    var newItem = prompt("Enter New Value");
+    e.parentNode.parentNode.firstChild.value = newItem;
+    console.log(e.parentNode.parentNode.firstChild.value);
 }
 
 function deleteItem(e) {
-    e.parentNode.firstChild.remove();
+    e.parentNode.parentNode.remove();
 }
 
 function deleteAll() {
