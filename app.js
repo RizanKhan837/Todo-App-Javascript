@@ -6,17 +6,30 @@ var input = document.querySelector(".input-list")
 var addBtn = document.getElementById("submit")
 var tasks = document.querySelector(".tasks")
 
+let arr = [];
+
 
 function addTodo() {
-    //create li tag with text node
+    // create li tag with text node
     if (input.value.trim() != "") {
         let newItem = document.createElement('div')
         newItem.classList.add('item')
-        var object = document.createElement('object')
+        /* var object = document.createElement('object')
         var liText = document.createTextNode(input.value)
-        object.appendChild(liText)
-        //list.appendChild(object
-        newItem.innerHTML = `<p> ${input.value} </p>
+        object.appendChild(liText) */
+        var object = {  
+            todo: input.value,
+            isCompleted: false
+        }
+        arr.push(object);
+        let b = arr.filter(x => x.todo == "todo") // Shortest Way
+        let array = arr.map((e) => {
+            return e;
+        })
+        console.log(array)
+        console.log(b); 
+        // list.appendChild(object
+        newItem.innerHTML = `<p> ${object.todo} </p>
         <div class = "item-btn">
             <i class="fa-solid fa-pen-to-square" onclick="editItem(this)"></i>
             <i class="fa-solid fa-xmark" onclick="deleteItem(this)"></i>
@@ -66,6 +79,23 @@ function addTodo() {
     li.appendChild(deleteBtn); */
 
     console.log(object);
+}
+
+
+function filter(){
+    var val = prompt("Enter Value");
+    let b = arr.filter(x => x.todo == val) // Shortest Way
+    deleteAll()
+    b.forEach(element => {
+        let newItem = document.createElement('div')
+        newItem.classList.add('item')
+        newItem.innerHTML = `<p> ${element.todo} </p>
+        <div class = "item-btn">
+            <i class="fa-solid fa-pen-to-square" onclick="editItem(this)"></i>
+            <i class="fa-solid fa-xmark" onclick="deleteItem(this)"></i>
+        </div>`
+        tasks.appendChild(newItem)
+    });
 }
 
 function editItem(e) {
