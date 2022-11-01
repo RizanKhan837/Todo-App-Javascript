@@ -8,13 +8,14 @@ var tasks = document.querySelector(".tasks")
 
 var list  = document.getElementById('list');
 
-let arr = [];
+var arr = [];
 
 
 function addTodo() {
     // create li tag with text node
     if (input.value.trim() != "") {
-        deleteItem(list)
+        //deleteItem(list)
+
         let newItem = document.createElement('div')
         newItem.classList.add('item')
         /* var object = document.createElement('object')
@@ -25,13 +26,14 @@ function addTodo() {
             todo: input.value,
             isCompleted: false
         }
+
         arr.push(object);
         let b = arr.filter(x => x.todo == "todo") // Shortest Way
         let array = arr.map((e) => {
             return e;
         })
         console.log(array)
-        console.log(b); 
+        //console.log(b); 
         // list.appendChild(object
         newItem.innerHTML = `<p> ${object.todo} </p>
         <div class = "item-btn">
@@ -82,7 +84,7 @@ function addTodo() {
     /* li.appendChild(editBtn);
     li.appendChild(deleteBtn); */
 
-    console.log(object);
+    //console.log(object);
 }
 
 
@@ -129,6 +131,8 @@ function editItem(e) {
 
 function deleteItem(e) {
     e.parentNode.parentNode.remove();
+    let index = arr.indexOf(e.value);
+    arr.splice(index, 1);
 }
 
 function deleteAll() {
