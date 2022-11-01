@@ -7,7 +7,7 @@
 .title{
     font-size: 30px;
     font-weight: 600;
-    color: rgb(2, 0, 12);
+    color: rgb(5,4,103);
     letter-spacing: 1px;
     margin: 30px, 0;
 }
@@ -32,7 +32,7 @@ body{
 .list-head{
     display: grid;
     border-radius: 20px;
-    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-columns: 225px 1fr 2fr 3fr;
     gap: 16px;
 }
 .add-list{  
@@ -148,4 +148,98 @@ body{
   .parallax .p11 {
     bottom: 10%;
     right: 10%;
+  }
+  
+  .icon {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .icon::before, .icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 30px;
+  }
+  .icon i {
+    position: relative;
+    color: rgb(5,4,103);
+    font-size: 30px;
+    margin-top: 15px;
+    transition: all 0.25s ease;
+  }
+  
+  .icon-fill::before {
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 1px rgb(68,215,182);
+  }
+  .icon-fill:hover::before {
+    box-shadow: inset 0 0 0 60px rgb(68,215,182);
+  }
+  
+  .icon-enter::after {
+    box-shadow: inset 0 0 0 1px rgb(255,76,96);
+  }
+  .icon-enter::before {
+    border-radius: 0;
+    margin-left: -100%;
+    box-shadow: inset 0 0 0 60px rgb(255,76,96);
+  }
+  .icon-enter:hover::before {
+    margin-left: 0;
+  }
+  
+  .icon-expand::after {
+    box-shadow: inset 0 0 0 1px rgb(255,209,92);
+  }
+  .icon-expand::before {
+    background: rgb(255,209,92);
+    box-shadow: inset 0 0 0 60px #ffffff;
+  }
+  .icon-expand:hover::before {
+    box-shadow: inset 0 0 0 1px #ffffff;
+  }
+  
+  .icon-collapse::before {
+    border-radius: 0;
+  }
+  .icon-collapse:hover::before {
+    box-shadow: inset 0 30px 0 0 #8CC63F, inset 0 -30px 0 0 #8CC63F;
+  }
+  .icon-collapse::after {
+    box-shadow: inset 0 0 0 1px #8CC63F;
+  }
+  
+  .icon-rotate {
+    box-shadow: inset 0 0 0 1px #7E3661;
+  }
+  .icon-rotate::after, .icon-rotate::before {
+    border: 0px solid transparent;
+  }
+  .icon-rotate:hover::before {
+    transition: border-top-width 0.3s ease, border-top-color 0.3s ease;
+    border-width: 60px;
+    border-top-color: #7E3661;
+  }
+  .icon-rotate:hover::after {
+    transition: border-left-width 0.3s ease, border-left-color 0.3s ease;
+    border-width: 60px;
+    border-left-color: #7E3661;
+  }
+  .icon-rotate:hover {
+    transition: background 0.001s ease 0.3s;
+    background: #7E3661;
+  }
+  .icon-rotate i {
+    z-index: 1;
   }

@@ -48,33 +48,24 @@
 
             <div class="list-head">
                 <input type="text" placeholder="Enter Todo" class="input-list" id="todo_Item">
-                <button onclick="addTodo()" class="add-list" id="submit">Add Todo</button>
+                <div onclick="addTodo()"  class="icon icon-fill"><i class="fa fa-plus"></i></div>
+                <div onclick="deleteAll()" class="icon icon-enter"><i class="fa fa-trash"></i></div>
+                <div id="filter" onclick="filter()" class="icon icon-expand"> <i class="fa fa-filter"></i></div>
+                <div id="unfilter" style="display:none" onclick="unfilter()" class="icon icon-expand"> <i class="fa-solid fa-filter-circle-xmark"></i></div>
+                <!--<button onclick="addTodo()" class="add-list" id="submit">Add Todo</button>
                 <button onclick="deleteAll()" class="add-list" id="deleteAll">Delete All</button>
-                <!--<button onclick="filter()" class="add-list" id="filter">Filter</button> -->
+                <button onclick="filter()" class="add-list" id="filter">Filter</button> -->
             </div>
         <div class="tasks">
-            <!-- <div class="item">
-                <p id="list">New Item Here</p>
+            <div class="item">
+                <p>Nothing to do...(❁´◡`❁)</p>
                 <div class="item-btn">
                     <i class="fa-solid fa-pen-to-square" onclick="editItem(this)"></i>
-                    <i class="fa-solid fa-xmark" onclick="deleteItem(this)"></i>
+                    <i id="list" class="fa-solid fa-xmark" onclick="deleteItem(this)"></i>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="content">
-          <h1>CSS3 Icons</h1>
-          <div class="icon-container">
-            <div class="icon icon-fill"><i class="fa fa-home"></i></div>
-            <div class="icon icon-enter"><i class="fa fa-user"></i></div>
-            <div class="icon icon-expand"> <i class="fa fa-bars"></i></div>
-            <div class="icon icon-collapse"><i class="fa fa-sign-in"></i></div>
-            <div class="icon icon-rotate"><i class="fa fa-phone"></i></div>
-          </div>
-        </div>
-      </div>
     
       <!--  <div>
         <ul id="list">
@@ -83,5 +74,9 @@
 
     <script src="./app.js"></script>
     <script src="./parallax.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5daa8eb347.js"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>
