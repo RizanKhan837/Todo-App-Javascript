@@ -126,13 +126,13 @@ function editItem(e) {
     var newItem = prompt("Enter New Value");
     console.log(e.parentNode.parentNode.firstChild);
     e.parentNode.parentNode.firstChild.innerHTML =  `${newItem}`;
-    console.log(e.parentNode.parentNode.firstChild.value);
+    //console.log(e.parentNode.parentNode.firstChild.value);
 }
 
 function deleteItem(e) {
     e.parentNode.parentNode.remove();
-    /* let index = arr.indexOf(e.value);
-    arr.splice(index, 1); */
+    let index = arr.indexOf(e.value);
+    arr.splice(index, 1);
 }
 
 function deleteAll() {
