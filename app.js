@@ -1,5 +1,3 @@
-/* var user = prompt("Enter Username")
-document.write("Hello World ", user) */
 
 
 var input = document.querySelector(".input-list")
