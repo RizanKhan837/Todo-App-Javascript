@@ -131,8 +131,8 @@ function editItem(e) {
 
 function deleteItem(e) {
     e.parentNode.parentNode.remove();
-    let index = arr.indexOf(e.value);
-    arr.splice(index, 1);
+    /* let index = arr.indexOf(e.value);
+    arr.splice(index, 1); */
 }
 
 function deleteAll() {
