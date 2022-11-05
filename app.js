@@ -122,7 +122,7 @@ function unfilter(){
 
 function editItem(e) {
     var newItem = prompt("Enter New Value");
-    console.log(e.parentNode.parentNode.firstChild);
+    //console.log(e.parentNode.parentNode.firstChild);
     e.parentNode.parentNode.firstChild.innerHTML =  `${newItem}`;
 }
 
